@@ -1,0 +1,2 @@
+学会写framework和library，不要一味地写application
+
