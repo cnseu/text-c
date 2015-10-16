@@ -1,0 +1,39 @@
+#include <stdio.h>
+int pow2(int n);
+void show_binary(int x,int limit);
+
+int main()
+{
+	int n,limit,i;
+	scanf("%d",&n);
+	limit =pow2(n);
+	printf("%d\n",limit);
+	
+	for (i=0;i<limit;i++){
+		show_binary(i,limit);
+		printf(" :%d\n",i);
+	}
+	return 0;
+}
+
+int pow2(int n)
+{
+	int ans=1;
+	while (n>0){
+		ans = ans * 2;
+		n--;
+	}
+	return ans;
+}
+
+void show_binary(int x,int limit)
+{
+	limit=limit/2;
+	while(limit>0){
+	printf("%d",x/limit);
+	x=x%limit;
+	limit = limit /2;
+	}
+}
+
+
